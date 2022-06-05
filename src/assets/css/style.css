@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+*{margin:0;padding:0;text-decoration: none;list-style:none;box-sizing: border-box;}
+html,body{position: relative;width: 100%;height:100%;overflow: hidden;}
+
+button{padding:2px 16px 0;line-height: 26px;border:1px solid #2a92c2;border-radius: 8px;transition: 0.2s;background:transparent;cursor: pointer;}
+button:hover{background: #2a92c2;color:#fff;font-weight: bold;}
+
+.flex_center{display: flex;align-items: center;}
+.ps{width: 100%;;height: 100%;min-height: 100%;margin-top:70px;}
+#app{position: relative;width: 100%;height: 100%;}
+#header{position:fixed;display: flex;align-items: center;width:100%;height:70px;color: #fff;background-color: #222;top:0;left:0;z-index: 100;}
+#header .app_name{width:180px;margin-right:50px;font-size: 30px;text-align: center;}
+#header .gnb li{padding:0 20px;}
+#header .gnb li:first-child{padding:0 20px 0 0;}
+#header .gnb li a{font-size: 20px;color: #fff;}
+
+.main_wrap{display:flex;width:100%;min-height:100%;background: #f4f6f8;}
+#lnb{position: fixed;top:70px;left:0;width:180px;height: 100%;;background:rgba(32,32,32,0.95);}
+#lnb ul{margin-top:50px;padding:0 10px;}
+#lnb ul li{border-top:1px solid #ddd;}
+#lnb ul li ~ li{border-bottom:1px solid #ddd;}
+#lnb ul li a{display: block;width: 100%;line-height: 40px;color:#fff;}
+.content{width:1024px;padding:20px 0 200px;margin:0 auto;}
+#lnb + .content{width:100%;padding:20px 50px 180px 200px;}
+
+.section{padding-bottom:30px;min-height: 500px;}
+.section ~ .section{padding-top:30px;border-top:1px solid #ddd;}
+
+.section h3{font-size: 40px;line-height: 50px;margin-bottom: 30px;}
+.section h3 span{position: relative;z-index: 1;}
+.section h3 span::after{content: '';position: absolute;bottom:5px;left:0;width:100%;height:10px;border-radius: 10px;background: rgb(250, 207, 128);z-index:-1;}
+
+.list_box{padding:20px;border:1px solid skyblue;border-radius: 10px;}
+.list_box ~ .list_box{margin-top:30px;}
+.list_box h4{margin-bottom:15px;}
+.list_box .btn_wrap{gap:10px;margin-top:10px;}
+
+.muti_event{width:200px;padding:10px 20px; text-align: center;border:1px solid black;transition: 0.5s;cursor: pointer;}
+.muti_event.active{color:#fff;background: black;}
+.toggle_box span{position: relative;padding:0 10px;margin-right:20px;line-height: 30px;font-size:24px;z-index: 1;}
+.toggle_box span::before{content: '';position: absolute;width:0%;height: 3px;background-color: orange;bottom:6px;z-index: -1;transition: 0.5s;}
+.toggle_box span.active::before{width:calc(100% - 20px);}
+.code_editor{margin-top:20px;}
