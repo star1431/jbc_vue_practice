@@ -99,7 +99,7 @@ button:hover{background: #2a92c2;font-weight: bold;}
 .list_box ~ .list_box{margin-top:3rem;}
 .list_box h4{margin-bottom:1.5rem;}
 .list_box .btn_wrap{gap:1rem;margin-top:1rem;}
-.muti_event{width:20rem;padding:1rem 2rem; text-align: center;border:0.1rem solid black;transition: 0.5s;cursor: pointer;}
+.muti_event{width:20rem;padding:1rem 2rem; text-align: center;border:0.1rem solid #2a92c2;transition: 0.5s;cursor: pointer;}
 .muti_event.active{color:#fff;background: black;}
 .toggle_box span{position: relative;padding:0 1rem;margin-right:2rem;line-height: 3rem;font-size:2.4rem;z-index: 1;}
 .toggle_box span::before{content: '';position: absolute;width:0%;height: 0.3rem;background-color: orange;bottom:0.6rem;z-index: -1;transition: 0.5s;}
@@ -118,4 +118,13 @@ button:hover{background: #2a92c2;font-weight: bold;}
     #header .mo_gnb{display: block;}
     #lnb{display: none;}
     #lnb + .content{padding:2rem 5rem;}
+}
+@media screen and (max-width:486px) {
+    html{font-size:8px;}
+    #lnb+.content{padding:2rem 2rem;}
+
+}
+@media screen and (max-width:360px) {
+    html{font-size:7px;}
+
 }

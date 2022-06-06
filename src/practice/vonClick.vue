@@ -56,6 +56,7 @@ export default {
           :languages="[['html', 'HTML']]"
           :read_only="true"
           :hide_header="true"
+          :wrap_code="true"
           width="100%"
           font_size="14px"
         ></CodeEditor>
@@ -88,6 +89,7 @@ export default {
           :languages="[['html', 'HTML']]"
           :read_only="true"
           :hide_header="true"
+          :wrap_code="true"
           width="100%"
           font_size="14px"
         ></CodeEditor>
@@ -114,6 +116,7 @@ export default {
           :languages="[['html', 'HTML']]"
           :read_only="true"
           :hide_header="true"
+          :wrap_code="true"
           width="100%"
           font_size="14px"
         ></CodeEditor>
