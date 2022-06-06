@@ -4,17 +4,27 @@ import HomeView from './views/Home.vue'
 
 // 라우터값 설정
 const routes = [
-    //1DETH
+    //1deth
     {path: '',name: 'home',component: HomeView},
-    {path: '/practice',name: 'practice',component: () => import( './views/practice.vue'),
+    // {path: '',name: 'about',component: () => import( './views/AboutView.vue'),},
+    {path: '/note',name: 'note',component: () => import( './views/note.vue'),
+        //2deth
         children:[
-            {path:'',name: 'vonClick',component: () => import( './content/vonClick.vue')},
-            {path:'/practice/test',name: 'test',component: () => import( './content/test-height.vue')},
+            {path:'',name: 'about',component: () => import( './note/about.vue')},
+            {path:'/note/start',name: 'start',component: () => import( './note/start.vue')},
+
+        ]
+    },
+    {path: '/practice',name: 'practice',component: () => import( './views/practice.vue'),
+        //2deth
+        children:[
+            {path:'',name: 'vonClick',component: () => import( './practice/vonClick.vue')},
+            {path:'/practice/test',name: 'test',component: () => import( './practice/test-height.vue')},
 
         ]
     },
 
-    //2DETH
+    //2deth
     // {path: '/practice/vonClick',name: 'vonClick',component: () => import( './content/vonClick.vue')},
     // {path: '/practice/test',name: 'test',component: () => import( './content/test-height.vue')},
 ]
