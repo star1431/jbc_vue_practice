@@ -1,24 +1,17 @@
-# jbc_test
+# Vue 연습하는 사이트
 
-## Project setup
-```
-npm install
-```
+============
+#### 미리보기
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### [https://star1431.github.io/jbc_vue_practice/#/](https://star1431.github.io/jbc_vue_practice/#/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Vue 배우면서 기록하고 만들어보는 연습용 사이트입니다.
 
-### Lints and fixes files
-```
-npm run lint
-```
+> **기능**
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> - 
+> - 
+> - 
+> - 
+> 
+
