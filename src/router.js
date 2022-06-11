@@ -1,5 +1,5 @@
 // 라우터와 1뎁스 페이지 임포트
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from './views/Home.vue'
 
 // 라우터값 설정
@@ -12,6 +12,10 @@ const routes = [
         children:[
             {path:'',name: 'about',component: () => import( './note/about.vue')},
             {path:'/note/start',name: 'start',component: () => import( './note/start.vue')},
+            {path:'/note/data-bind',name: 'data-bind',component: () => import( './note/vue_skill/data-bind.vue')},
+            {path:'/note/vue-event',name: 'vue-event',component: () => import( './note/vue_skill/vue-event.vue')},
+            {path:'/note/vue-component',name: 'vue-component',component: () => import( './note/vue_skill/vue-component.vue')},
+            {path:'/note/vue-router',name: 'vue-router',component: () => import( './note/vue_skill/vue-router.vue')},
 
         ]
     },
@@ -30,7 +34,8 @@ const routes = [
 ]
 // VueRouter에 라우터값 넣기
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
+    // mode: 'history',
     routes
 })
 

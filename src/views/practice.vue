@@ -1,7 +1,7 @@
 <template>
   <perfect-scrollbar>
     <div class="main_wrap">
-      <lnb-app v-bind:linkInfo="lnb_link" :linkName="lnb_list"></lnb-app>
+      <lnb-app :lnb_data="lnb_lists"></lnb-app>
       <div class="content">
         <router-view/>
       </div>
@@ -19,9 +19,21 @@ export default {
     // VonClick
   },
   data(){
-    return {
-      lnb_list:['v-on:Click이벤트','test-height'],
-      lnb_link:['/practice','/practice/test'],
+    return {  
+      lnb_lists:[
+        {
+          depth2:true,
+          depth3:false,
+          depth2_name:'v-on:Click이벤트',
+          depth2_link:'/practice',
+        },
+        {
+          depth2:true,
+          depth3:false,
+          depth2_name:'test-height',
+          depth2_link:'/practice/test',
+        },
+      ],
     }
   }
 }

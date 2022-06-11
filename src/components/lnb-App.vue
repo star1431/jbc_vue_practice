@@ -1,8 +1,14 @@
 <template>
   <aside id="lnb">
-    <ul>
-      <li v-for="(lnb,i) in lnb_list" :key="i">
-      <router-link :to="lnb_link[i]">{{lnb_list[i]}}</router-link>
+    <ul class="lnb_depth2">
+      <li v-for="(lnb,i) in lnb_data" :key="i">
+        <router-link :to="lnb.depth2_link" v-if="lnb.depth2">{{lnb.depth2_name}}</router-link>
+        <p v-else>{{lnb.depth2_name}}</p>
+        <ul class="lnb_depth3" v-if="lnb.depth3">
+          <li v-for="(lnb2,i2) in lnb.depth3_lists" :key="i2">
+            <router-link :to="lnb2.depth3_link">{{lnb2.depth3_name}}</router-link>
+          </li>
+        </ul>
       </li>
     </ul>
   </aside>
@@ -11,11 +17,10 @@
 <script>
 export default {
   name: 'lnb-App',
-  props: ['linkInfo','linkName'],
-  data(){
-    return{
-      lnb_list:this.linkName,
-      lnb_link:this.linkInfo
+  props: {
+    lnb_data:{
+      type: Array, 
+      default: () => [] 
     }
   }
 }

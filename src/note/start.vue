@@ -1,11 +1,11 @@
 <template>
   <div class="section">
     <h3><span>Vue.js 시작하기</span></h3>
-    <div class="list_box text_area">
+    <div class="info_wrap">
       <h4><i class="fa-brands fa-vuejs"></i>Vue 설치</h4>
-      <div>
-        <p class="content_tit">필수 설치</p>
-        <div class="content_box">
+      <div class="info_box">
+        <p class="info_tit">필수 설치</p>
+        <div class="info">
           <p>Vue 프로젝트 만들기 앞서 node.js와 텍스트에디터 있어야 한다.</p>
           <ul>
             <li>vscode URL : <a href="https://code.visualstudio.com/" target="_blnk">https://code.visualstudio.com/</a></li>
@@ -15,9 +15,9 @@
         <div class="img_box"><img src="@/assets/img/vscode.png" alt="플러그인설치"></div>
         </div>
       </div>
-      <div>
-        <p class="content_tit">프로젝트 만들기</p>
-        <div class="content_box">
+      <div class="info_box">
+        <p class="info_tit">프로젝트 만들기</p>
+        <div class="info">
           <p>임의 폴더 하나 만들어서 vscode에 드래그 하거나 file - folder로 폴더 연 다음</p>
           <p><span class="small_key">ctrl + shift + `</span> 키 누르면 하단에 새 터미널이 열리게 된다.</p>
           <p>거기서 아래와 같이 입력 후 엔터치면 Vue설치가 시작된다.</p>
@@ -32,7 +32,7 @@
           ></CodeEditor>
           <div class="img_box"><img src="@/assets/img/vue_t.png" alt="플러그인설치"></div>
         </div>
-        <div class="content_box">
+        <div class="info">
           <p>설치 다 되고 나서 아래와 같이 'vue create 프로젝트명' 입력하면 vue2,vue3버전 선택하는 항목이 나오는데 vue3로 설치한다.</p>
           <CodeEditor
             value="vue create 프로젝트명 
@@ -66,16 +66,20 @@ npm run serve"
           <p>다시 npm run serve 입력하면 빌드되면서 localhost 주소가 나오는데 그 주소로 브라우저 열면 된다.</p>
         </div>
       </div>
-      <div>
-        <p class="content_tit">프로젝트 결과물</p>
+      <div class="info_box">
+        <p class="info_tit">프로젝트 결과물</p>
+        <div class="info">
           <div class="img_box"><img src="@/assets/img/site.png" alt="사이트"></div>
+        </div>
       </div>
-      <div>
-        <p class="content_tit">참고 사이트</p>
-        <div class="link_wrap">
-          <a href="https://wikidocs.net/17701" target="_blank">Vue란?</a>
-          <a href="https://kr.vuejs.org/v2/guide/index.html" target="_blank">Vue 시작하기</a>
-          <a href="https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/" target="_blank">Vue.js 입문서</a>
+      <div class="info_box">
+        <p class="info_tit">참고 사이트</p>
+        <div class="info">
+          <div class="link_wrap">
+            <a href="https://wikidocs.net/17701" target="_blank">Vue란?</a>
+            <a href="https://kr.vuejs.org/v2/guide/index.html" target="_blank">Vue 시작하기</a>
+            <a href="https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/" target="_blank">Vue.js 입문서</a>
+          </div>
         </div>
       </div>
     </div>
