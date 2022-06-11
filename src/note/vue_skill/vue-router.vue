@@ -6,7 +6,7 @@
       <div class="info_box">
         <p class="info_tit">빈페이지</p>
         <div class="info">
-          <p>빈페이지</p>
+          <p>빈페이지2</p>
         </div>
       </div>
     </div>
