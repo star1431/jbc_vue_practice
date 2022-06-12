@@ -9,12 +9,14 @@ $(function(){
             var menuClose = $('.btn_wrap .menu_close');
             if(!menuClose.is(':visible')){
                 dimBg.hide();
+                $('.mo_gnb').removeClass('active');
                 $('.mo_gnb').animate({width:'0'},200);
                 $('.mo_menu').hide();
             } else {
                 dimBg.show();
+                $('.mo_gnb').addClass('active');
                 $('.mo_gnb').animate({width:'50%'},200);
-                $('.mo_menu').show();
+                $('.mo_menu').delay(150).fadeIn();
             }
         });
         //bg 클릭시
@@ -33,11 +35,15 @@ $(function(){
             dimBg.hide();
             $('.menu_open').show();
         });
-        $('.acco p').click(function(){
-            $('.acco ul').slideUp();
+        $('.acco p,.acco a').click(function(){
+            let acco = $(this).parent('.acco').siblings('.acco');
+            $(this).toggleClass('active');
+            acco.children('p,a').removeClass('active');
+            acco.children('ul').slideUp();
+
             if ($(this).siblings('ul').is(':hidden')){
                $(this).siblings('ul').slideDown();
-            } else{
+            } else {
                $(this).siblings('ul').slideUp();
             }
          });

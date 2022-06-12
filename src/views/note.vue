@@ -12,7 +12,7 @@
 <script>
 import LnbApp from '@/components/lnb-App.vue'
 export default {
-  name: 'main-App',
+  name: 'note-App',
   components:{
     LnbApp,
   },
@@ -38,6 +38,10 @@ export default {
           depth2_link:'',
           
           depth3_lists:[
+            {
+              depth3_name:'vue 기초설명',
+              depth3_link:'/note/vue-basic',
+            },
             {
               depth3_name:'컴포넌트',
               depth3_link:'/note/vue-component',

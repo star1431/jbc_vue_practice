@@ -20,7 +20,4 @@ export default {
     }
 }
 Vue.use(CodeEditor)
-// const Vue = createApp(App)
-// createApp(App).mount('#app')
-
 

@@ -13,7 +13,7 @@
 import LnbApp from '@/components/lnb-App.vue'
 // import VonClick from '@/content/vonClick.vue'
 export default {
-  name: 'practice-App',
+  name: 'siteReview-App',
   components:{
     LnbApp,
     // VonClick
@@ -24,14 +24,20 @@ export default {
         {
           depth2:true,
           depth3:false,
-          depth2_name:'v-on:Click이벤트',
-          depth2_link:'/practice',
+          depth2_name:'사이트 구조',
+          depth2_link:'/site-review',
         },
         {
           depth2:true,
           depth3:false,
-          depth2_name:'test-height',
-          depth2_link:'/practice/test',
+          depth2_name:'사이트 라우터',
+          depth2_link:'/site-review/site-router',
+        },
+        {
+          depth2:true,
+          depth3:false,
+          depth2_name:'js 설정값',
+          depth2_link:'/site-review/site-js',
         },
       ],
     }
