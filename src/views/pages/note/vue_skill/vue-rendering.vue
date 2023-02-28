@@ -78,6 +78,61 @@
         </div>
       </div>
       <div class="info_box">
+        <p class="info_tit">리스트 렌더링 (v-for)</p>
+        <div class="info">
+          <p>
+            v-for 디렉티브는 반복성을 가진 리스트 형태를 배열이나 객체로 하여금 각 항목을 반복하여 요소를 렌더링 하는 방법이다.<br>
+            반복할 엘리먼트에
+            <CodeEditor
+              :value=codeEditorInline[0]
+              :languages="[['html', 'HTML']]"
+              :read_only="true"
+              :wrap_code="false"
+              width="auto"
+              font_size="14px"
+            ></CodeEditor>
+            혹은
+            <CodeEditor
+              :value=codeEditorInline[1]
+              :languages="[['html', 'HTML']]"
+              :read_only="true"
+              :wrap_code="false"
+              width="auto"
+              font_size="14px"
+            ></CodeEditor>
+            로 표현 한다.<br>
+            - '변수' 는 각 요소의 값.<br>
+            - '인덱스'는 각 요소의 인덱스 값.<br>
+            - '데이터'는 반복할 배열이나 객체 혹은 반복할 횟수.<br>
+
+            
+          </p>
+          <div class="sample-box">
+            <p class="sample-tit">sample (1)</p>
+            <ul>
+              <li v-for="(item, i) in sampleArr" :key="i">
+                <span>{{ item.title }} : </span>
+                <span>{{ item.content }}</span>
+              </li>
+            </ul>
+            <p class="sample-tit">sample (2)</p>
+            <ul>
+              <li v-for="number in 3" :key="number">
+                <span>숫자 : {{ number }}</span>
+              </li>
+            </ul>
+          </div>
+          <CodeEditor
+            :value=codeEditorList[3]
+            :languages="[['html', 'Vue']]"
+            :read_only="true"
+            :wrap_code="true"
+            width="100%"
+            font_size="14px"
+          ></CodeEditor>
+        </div>
+      </div>
+      <div class="info_box">
         <p class="info_tit">참고 사이트</p>
         <div class="info">
           <div class="link_wrap">
@@ -91,7 +146,10 @@
 
 <script>
 import CodeEditor from 'simple-code-editor'
-
+const codeEditorInline = [
+`<div v-for="변수 in 데이터" :key="변수">`,
+`<div v-for="(변수, 인덱스) in 데이터" :key="인덱스">`
+]
 const codeEditorList = [
 `<template>
   <button class="btn" @click="sampleIf01 = !sampleIf01">문구 생성/삭제 토글</button>
@@ -150,6 +208,35 @@ export default {
   },
 }
 <${'/'}script>`
+,`<template>
+  <p class="sample-tit">sample (1)</p>
+  <ul>
+    <li v-for="(item, i) in sampleArr" :key="i">
+      <span>{{ item.title }} : </span>
+      <span>{{ item.content }}</span>
+    </li>
+  </ul>
+
+  <p class="sample-tit">sample (2)</p>
+  <ul>
+    <li v-for="number in 3" :key="number">
+      <span>숫자 : {{ number }}</span>
+    </li>
+  </ul>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      sampleArr: [
+        {title: '타이틀1', content: '내용1'},
+        {title: '타이틀2', content: '내용2'}
+      ]
+    }
+  }
+}
+<${'/'}script>`
 ,
 ]
 export default {
@@ -162,10 +249,16 @@ export default {
   },
   data(){
     return{
+      codeEditorInline,
       codeEditorList,
       sampleIf01 : false,
       sampleIf02 : "one",
-      sampleIf03 : true
+      sampleIf03 : true,
+      sampleArr: [
+        {title: '타이틀1', content: '내용1'},
+        {title: '타이틀2', content: '내용2'},
+      ],
+
     }
   },
   methods:{
@@ -181,3 +274,9 @@ export default {
   }
 }
 </script>
+<style>
+.info p .code_editor{display:inline-flex;margin:0;vertical-align:text-bottom;border-radius:0 !important;}
+.info p .code_editor .header{display:none !important;}
+.info p .code_editor > .code_area > pre{line-height:initial;}
+.info p .code_editor > .code_area > pre > code{padding:0 !important;}
+</style>

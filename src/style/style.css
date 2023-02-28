@@ -15,6 +15,7 @@ h5,h6{font-size:2rem;line-height:3.2rem;}
 .mt32{margin-top:3.2rem;}
 .tac{text-align:center;}
 .flex_center{display:flex;align-items:center;flex-wrap:wrap;}
+.flex_column{display:flex;flex-direction:column;}
 .space_medium{gap:1.2rem;}
 .acenter{align-items:center;}
 .btn{padding:0 1.6rem;line-height:2.6rem;border:0.1rem solid #2a92c2;border-radius:0.8rem;transition:0.2s;background:transparent;cursor:pointer;color:#fff;}
@@ -137,8 +138,10 @@ h5,h6{font-size:2rem;line-height:3.2rem;}
 /* sample-box */
 .dropdown > .mark > div{font-weight:bold;color:#fff !important;}
 .sample-box{margin:2rem 0;padding:2rem;border-radius:1.2rem;background-color:#282c34;}
-.sample-box .sample-tit{padding:0 0.8rem; border-radius:0.8rem;background-color:#2a92c2;}
+.sample-box .sample-tit{display:inline-flex;padding:0 0.8rem; border-radius:0.8rem;background-color:#2a92c2;}
 .sample-box p + p{margin:0;}
+.sample-box ul{margin:0.8rem;}
+.sample-box ul li ~ li{margin-top:0;}
 /* code-eaditor */
 .code_editor.atom_one_dark .hljs-comment{color:#57a64a;}
 
