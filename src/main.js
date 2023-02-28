@@ -1,23 +1,21 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-const Vue = createApp(App)
-Vue.use(router).mount('#app')
-
-import './assets/css/style.css'
-import './assets/js/ui_common.js'
-
-//퍼펙트스크롤 플러그인
+import App from '@/App.vue'
+import router from '@/router/index'
 import PerfectScrollbar from 'vue3-perfect-scrollbar'
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
+import '@/style/style.css'
+import CodeEditor from 'simple-code-editor'
+
+const Vue = createApp(App)
+Vue.use(CodeEditor)
+Vue.use(router)
 Vue.use(PerfectScrollbar)
-//코드하이라이터 플러그인
-import CodeEditor from 'simple-code-editor';
+Vue.mount('#app')
 
 export default {
-    components: {
-        CodeEditor
-    }
+  components: {
+    CodeEditor,
+    PerfectScrollbar,
+  }
 }
-Vue.use(CodeEditor)
 
